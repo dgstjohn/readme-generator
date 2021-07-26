@@ -19,7 +19,9 @@ function renderLicenseBadge(license) {
   else {
     const licenseBadge = ' ';
   }
-}
+};
+
+renderLicenseBadge();
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -42,7 +44,7 @@ function renderLicenseLink(license) {
   else {
     const licenseLink = ' ';
   }
-}
+};
 
 
 
@@ -53,13 +55,13 @@ function renderLicenseSection(license) {
   ## License
   Licensed under the ${licenseLink} license.
   `
-}
+};
 
 // TODO: Create a function to generate markdown for README
-module.exports = templateData => generateMarkdown(data) {
-  const { license, ...header } = templateData;
-
-  return `# ${data.title}
+function generateMarkdown(data) {
+  return 
+  `
+  # ${data.title}
   licenseBadge
   ## Description
   ${data.description}
@@ -73,6 +75,6 @@ module.exports = templateData => generateMarkdown(data) {
   If you want to know more about the README generator, contact me on ${data.github} or by email at ${data.email}.
   ${renderLicenseSection(license)}
 `;
-}
+};
 
 module.exports = generateMarkdown;

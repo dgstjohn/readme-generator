@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateReadme = require('./generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown.js');
 const writeFile = require('./generateSite.js');
 
 // Prompt the user
@@ -11,7 +11,7 @@ const promptProject = () => {
             type: 'input',
             name: 'title',
             message: 'What is the title of your project?',
-            validate: nameInput => {
+            validate: titleInput => {
                 if (titleInput) {
                     return true;
                 } else {
@@ -54,7 +54,7 @@ const promptProject = () => {
             }
         }
     ])
-}
+};
 
 const promptOther = () => {
     return inquirer.prompt([
@@ -74,9 +74,9 @@ const promptOther = () => {
             message: 'Please enter any instructions for testing:'
         }
     ])
-}
+};
 
-const promptQuestions = () => {
+const promptQuestions = (questions) => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -110,13 +110,13 @@ const promptQuestions = () => {
             message: 'What license will your project use?',
             choices: ['ISC', 'MIT', 'GNU General Public License', 'Apache', 'BSD', 'Other'] //if 'Other', provide prompt for that 
         }
-        
     ])
-}
+};
 
 promptProject()
 .then(promptOther)
 .then(promptQuestions)
+.then(generateMarkdown)
 .then(markdown => {
     return writeFile(markdown)
 })
