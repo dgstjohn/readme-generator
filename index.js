@@ -59,15 +59,14 @@ const questions = [
         }
     },
     {
-        type: 'confirm',
+        type: 'input',
         name: 'installation',
         message: 'How are your packages installed for your project?',
         default: 'npm install'
     },
     {
-        // if so, 
         type: 'input',
-        name: 'enterInstallation',
+        name: 'test',
         message: 'What command is run to test your project?',
         default: 'npm test'
             
@@ -98,7 +97,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(inquirerResponses => {
         console.log('Generating README...');
-        writeToFile('README.md', generateMarkdown({ ...inquirerResponses }));
+        writeToFile('dist/README.md', generateMarkdown({ ...inquirerResponses }));
       });
 }
 
