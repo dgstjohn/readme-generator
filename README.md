@@ -22,7 +22,7 @@
   
   ## Installation
 
-  Type false to install any packages needed for your project.
+  Type npm install to install any packages needed for your project.
 
   ## Usage
 
