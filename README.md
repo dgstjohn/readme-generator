@@ -4,7 +4,11 @@
   ![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)
 
   ## Description
-  This is a Node.js app using the inquirer package to take in answers to a list of questions and return a generated README for the associated project.
+  A Node.js app to take questions through the inquirer package and generate a README from the answers.
+
+  ## Screenshot of Inquirer Questions Process
+
+  ![Screenshot of Inquirer questions process](assets/images/inquirer-questions.png?raw=true)
 
   ## Table of Contents
 
@@ -26,11 +30,11 @@
 
   ## Usage
 
-  This is run from the command line without a front end.
+  This is entirely at the command line with no front end.
   
   ## Contributing
   
-  I am the sole author of this project.
+  I am the sole author.
   
   ## Tests
   
@@ -38,11 +42,12 @@
   
   ## Questions
   
-  If you want to know more about the README generator, view my GitHub at dgstjohn or contact me by email at dgstjohn@gmail.com.
-  
+  If you want to know more about the README generator, view my GitHub at [https://github.com/dgstjohn](https://github.com/dgstjohn) or contact me by email at dgstjohn@gmail.com.
+    
   ## License
-  
-  
-  ## License
+
   Licensed under the MIT license.
-  
+
+  ## Link to Video of Application Performance
+
+  [https://watch.screencastify.com/v/ypIrvZeAFoHcL1iA1Wqd](https://watch.screencastify.com/v/ypIrvZeAFoHcL1iA1Wqd)
